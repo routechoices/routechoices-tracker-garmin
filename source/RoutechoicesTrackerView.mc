@@ -1,9 +1,9 @@
 using Toybox.WatchUi;
 using Toybox.Graphics;
-using Toybox.Communication;
+using Toybox.Communications;
 using Toybox.Lang;
 
-class PositionSampleView extends WatchUi.View {
+class RoutechoicesTrackerView extends WatchUi.View {
 
     var posnInfo = null;
     var deviceId = "";
@@ -48,17 +48,15 @@ class PositionSampleView extends WatchUi.View {
         deviceId = devId;
     }
 
-    function sendPosition()
+    function sendPosition() {
         if( posnInfo != null ) {
+            var url = "https://www.routechoices.com/api/traccar/";
             var data = {
                 "id" => deviceId,
                 "lat" => posnInfo.position.toDegrees()[0].toString(),
                 "lon" => posnInfo.position.toDegrees()[0].toString(),
                 "timestamp" => posnInfo.when.value
             };
-
-            var url = "https://www.routechoices.com/api/traccar/";
-
             var options = {
                 :method => Communications.HTTP_REQUEST_METHOD_POST,
                 :headers => {
@@ -67,7 +65,7 @@ class PositionSampleView extends WatchUi.View {
                 :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED
             };
             var responseCallback = method(:onDataSent);
-            Communications.makeWebRequest(url, data, options, responseCallBack);
+            Communications.makeWebRequest(url, data, options, responseCallback);
         }
     }
 
