@@ -1,15 +1,20 @@
 using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.Communications;
-using Toybox.Lang;
+using Toybox.Application;
+using Toybox.Time;
 
 class RoutechoicesTrackerView extends WatchUi.View {
 
     var posnInfo = null;
-    var deviceId = "";
-
+    var deviceId = null;
+	var requestingId = false;
     function initialize() {
         View.initialize();
+        // deviceId = Application.Storage.getValue("deviceId");
+        if (deviceId == null) {
+            requestDeviceId();
+        }
     }
 
     //! Load your resources here
@@ -29,47 +34,82 @@ class RoutechoicesTrackerView extends WatchUi.View {
 
         // Set background color
         if( posnInfo != null ) {
-            dc.setColor( Graphics.COLOR_TRANSPARENT, Graphics.COLOR_BLACK );
+            dc.setColor( Graphics.COLOR_TRANSPARENT, Graphics.COLOR_GREEN );
         } else {
             dc.setColor( Graphics.COLOR_TRANSPARENT, Graphics.COLOR_RED );
         }
         dc.clear();
         dc.setColor( Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT );
-        dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Graphics.FONT_SMALL, deviceId, Graphics.TEXT_JUSTIFY_CENTER );
+        if (deviceId == null) {
+            dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Graphics.FONT_MEDIUM, "No Device ID", Graphics.TEXT_JUSTIFY_CENTER );
+            requestDeviceId();
+        } else {
+	        dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Graphics.FONT_LARGE, deviceId, Graphics.TEXT_JUSTIFY_CENTER );
+        }
     }
 
     function setPosition(info) {
         posnInfo = info;
-        sendPosition();
+        if(deviceId != null) {
+            sendPosition();
+        }
         WatchUi.requestUpdate();
     }
 
-    function setDeviceId(devId) {
-        deviceId = devId;
+    function setDeviceId(id) {
+        deviceId = id;
+        Application.Storage.setValue("deviceId", id);
+        WatchUi.requestUpdate();
     }
 
     function sendPosition() {
         if( posnInfo != null ) {
-            var url = "https://www.routechoices.com/api/traccar/";
-            var data = {
-                "id" => deviceId,
-                "lat" => posnInfo.position.toDegrees()[0].toString(),
-                "lon" => posnInfo.position.toDegrees()[0].toString(),
-                "timestamp" => posnInfo.when.value
-            };
+            var timestamp = Time.now().value();
+            System.println("Sending Position " + timestamp.toString());
+            var url = "https://www.routechoices.com/api/traccar/?id=" + deviceId +
+                "&lat=" + posnInfo.position.toDegrees()[0].toString() +
+                "&lon=" + posnInfo.position.toDegrees()[1].toString() +
+                "&timestamp=" + timestamp.toString();
+            var data = {};
             var options = {
                 :method => Communications.HTTP_REQUEST_METHOD_POST,
                 :headers => {
                     "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
                 },
-                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_URL_ENCODED
+                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
             };
             var responseCallback = method(:onDataSent);
             Communications.makeWebRequest(url, data, options, responseCallback);
         }
     }
 
-    function onDataSent(code, data) {
-        // Do something
+    function onDataSent(code, data) {}
+
+    function requestDeviceId () {
+        if(requestingId) {
+            return ;
+        }
+        requestingId = true;
+        var url = "https://www.routechoices.com/api/device_id/";
+        var params = {};
+        var options = {
+            :method => Communications.HTTP_REQUEST_METHOD_POST,
+            :headers => {
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
+            },
+            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+        };
+        var responseCallback = method(:onDeviceId);
+        Communications.makeWebRequest(url, params, options, responseCallback);
+    }
+
+    function onDeviceId (code, data) {
+        requestingId = false;
+        if (code == 200) {
+            System.println("Device ID Request Successful");
+            setDeviceId(data["device_id"]);
+        } else {
+            System.println("Device ID Request Failed" + code.toString());
+        }
     }
 }
