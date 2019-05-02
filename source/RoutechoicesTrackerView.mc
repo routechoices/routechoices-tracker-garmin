@@ -58,7 +58,7 @@ class RoutechoicesTrackerView extends WatchUi.View {
 
     function setDeviceId(id) {
         deviceId = id;
-        Application.Storage.setValue("deviceId", id);
+        // Application.Storage.setValue("deviceId", id);
         WatchUi.requestUpdate();
     }
 
