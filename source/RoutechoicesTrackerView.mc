@@ -8,11 +8,11 @@ class RoutechoicesTrackerView extends WatchUi.View {
 
     var posnInfo = null;
     var deviceId = null;
-	var requestingId = false;
+    var requestingId = false;
     function initialize() {
         View.initialize();
-        // deviceId = Application.Storage.getValue("deviceId");
-        if (deviceId == null) {
+        deviceId = Application.getApp().getProperty("deviceId");
+        if (deviceId == null || deviceId == "") {
             requestDeviceId();
         }
     }
@@ -44,7 +44,7 @@ class RoutechoicesTrackerView extends WatchUi.View {
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Graphics.FONT_MEDIUM, "No Device ID", Graphics.TEXT_JUSTIFY_CENTER );
             requestDeviceId();
         } else {
-	        dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Graphics.FONT_LARGE, deviceId, Graphics.TEXT_JUSTIFY_CENTER );
+            dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Graphics.FONT_LARGE, deviceId, Graphics.TEXT_JUSTIFY_CENTER );
         }
     }
 
@@ -58,7 +58,7 @@ class RoutechoicesTrackerView extends WatchUi.View {
 
     function setDeviceId(id) {
         deviceId = id;
-        // Application.Storage.setValue("deviceId", id);
+        Application.getApp().setProperty("deviceId", id);
         WatchUi.requestUpdate();
     }
 
