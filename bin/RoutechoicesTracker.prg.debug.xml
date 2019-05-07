@@ -1,70 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="11" pc="268435456" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="12" pc="268435460" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="4" lineNum="16" pc="268435479" symbol="onStart"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="4" lineNum="17" pc="268435483" symbol="onStart"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="21" pc="268435528" symbol="onStop"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="22" pc="268435532" symbol="onStop"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="6" lineNum="25" pc="268435577" symbol="onPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="6" lineNum="26" pc="268435581" symbol="onPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="30" pc="268435602" symbol="getInitialView"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="31" pc="268435606" symbol="getInitialView"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="32" pc="268435636" symbol="getInitialView"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="9" lineNum="12" pc="268435660" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="9" lineNum="13" pc="268435664" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="9" lineNum="14" pc="268435682" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="9" lineNum="15" pc="268435719" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="9" lineNum="16" pc="268435752" symbol="initialize"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="10" lineNum="21" pc="268435768" symbol="onLayout"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="11" lineNum="24" pc="268435773" symbol="onHide"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="12" lineNum="28" pc="268435778" symbol="onShow"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="32" pc="268435783" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="33" pc="268435787" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="36" pc="268435787" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="37" pc="268435800" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="39" pc="268435839" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="41" pc="268435875" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="42" pc="268435887" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="43" pc="268435923" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="44" pc="268435936" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="45" pc="268436011" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="13" lineNum="47" pc="268436026" symbol="onUpdate"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="51" pc="268436105" symbol="setPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="52" pc="268436109" symbol="setPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="53" pc="268436119" symbol="setPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="54" pc="268436132" symbol="setPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="56" pc="268436147" symbol="setPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="15" lineNum="59" pc="268436164" symbol="setDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="15" lineNum="60" pc="268436168" symbol="setDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="15" lineNum="61" pc="268436178" symbol="setDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="15" lineNum="62" pc="268436210" symbol="setDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="65" pc="268436227" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="66" pc="268436231" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="67" pc="268436244" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="68" pc="268436270" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="69" pc="268436305" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="73" pc="268436429" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="74" pc="268436437" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="81" pc="268436519" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="82" pc="268436537" symbol="sendPosition"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="17" lineNum="86" pc="268436565" symbol="onDataSent"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="88" pc="268436570" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="89" pc="268436574" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="90" pc="268436585" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="92" pc="268436589" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="93" pc="268436599" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="94" pc="268436606" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="95" pc="268436614" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="102" pc="268436696" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="103" pc="268436714" symbol="requestDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="106" pc="268436739" symbol="onDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="107" pc="268436743" symbol="onDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="108" pc="268436753" symbol="onDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="109" pc="268436764" symbol="onDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="110" pc="268436787" symbol="onDeviceId"/>
-<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="112" pc="268436810" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="14" pc="268435456" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="15" pc="268435460" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="16" pc="268435478" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="17" pc="268435515" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="3" lineNum="18" pc="268435548" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="4" lineNum="23" pc="268435564" symbol="onStart"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="4" lineNum="24" pc="268435568" symbol="onStart"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="4" lineNum="25" pc="268435612" symbol="onStart"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="4" lineNum="30" pc="268435700" symbol="onStart"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="34" pc="268435719" symbol="onStop"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="35" pc="268435723" symbol="onStop"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="36" pc="268435767" symbol="onStop"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="37" pc="268435785" symbol="onStop"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="5" lineNum="38" pc="268435803" symbol="onStop"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="6" lineNum="41" pc="268435813" symbol="onPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="6" lineNum="42" pc="268435817" symbol="onPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="6" lineNum="43" pc="268435837" symbol="onPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="6" lineNum="44" pc="268435870" symbol="onPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="49" pc="268435886" symbol="getInitialView"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="50" pc="268435890" symbol="getInitialView"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="51" pc="268435920" symbol="getInitialView"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="52" pc="268435953" symbol="getInitialView"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="7" lineNum="54" pc="268435982" symbol="getInitialView"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="57" pc="268436006" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="58" pc="268436010" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="59" pc="268436023" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="60" pc="268436049" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="61" pc="268436082" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="65" pc="268436206" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="66" pc="268436214" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="73" pc="268436296" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="8" lineNum="74" pc="268436314" symbol="sendPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="9" lineNum="78" pc="268436342" symbol="onDataSent"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="9" lineNum="79" pc="268436346" symbol="onDataSent"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="9" lineNum="80" pc="268436357" symbol="onDataSent"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="9" lineNum="82" pc="268436380" symbol="onDataSent"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="86" pc="268436401" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="87" pc="268436405" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="88" pc="268436416" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="90" pc="268436420" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="91" pc="268436430" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="92" pc="268436437" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="93" pc="268436445" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="100" pc="268436527" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="10" lineNum="101" pc="268436545" symbol="requestDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="104" pc="268436570" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="105" pc="268436574" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="106" pc="268436584" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="107" pc="268436595" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="108" pc="268436616" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="110" pc="268436639" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="11" lineNum="111" pc="268436672" symbol="onDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="12" lineNum="115" pc="268436685" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="12" lineNum="116" pc="268436689" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="12" lineNum="117" pc="268436699" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerApp.mc" id="12" lineNum="118" pc="268436731" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="12" pc="268436752" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="14" lineNum="13" pc="268436756" symbol="initialize"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="15" lineNum="16" pc="268436775" symbol="onLayout"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="16" lineNum="19" pc="268436780" symbol="onHide"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="17" lineNum="23" pc="268436785" symbol="onShow"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="27" pc="268436790" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="28" pc="268436794" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="31" pc="268436794" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="32" pc="268436808" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="34" pc="268436847" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="36" pc="268436883" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="37" pc="268436895" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="38" pc="268436931" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="39" pc="268436944" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="18" lineNum="41" pc="268437022" symbol="onUpdate"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="45" pc="268437101" symbol="setPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="46" pc="268437105" symbol="setPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="19" lineNum="47" pc="268437115" symbol="setPosition"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="20" lineNum="50" pc="268437132" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="20" lineNum="51" pc="268437136" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="20" lineNum="52" pc="268437146" symbol="setDeviceId"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="21" lineNum="55" pc="268437163" symbol="setConnectedState"/>
+<entry filename="/home/rphl/eclipse-workspace/RoutechoicesTracker/source/RoutechoicesTrackerView.mc" id="21" lineNum="56" pc="268437167" symbol="setConnectedState"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
@@ -75,62 +90,71 @@
 <entry id="8388645" module="true" symbol="Time"/>
 <entry id="8388770" module="true" object="true" symbol="Strings"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
-<entry id="16" method="true" symbol="sendPosition"/>
+<entry id="21" method="true" symbol="sendPosition"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
-<entry field="true" id="20" symbol="mainView"/>
+<entry field="true" id="17" symbol="mainView"/>
+<entry id="16" method="true" symbol="setConnectedState"/>
 <entry id="8388769" module="true" object="true" symbol="Rez"/>
 <entry id="8389123" method="true" symbol="onShow"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="25" symbol="AppName"/>
+<entry field="true" id="28" symbol="AppName"/>
+<entry field="true" id="13" symbol="isConnected"/>
 <entry id="8389594" symbol="headers"/>
-<entry field="true" id="24" symbol="LauncherIcon"/>
+<entry id="8388890" symbol="sport"/>
+<entry field="true" id="8388892" symbol="name"/>
+<entry field="true" id="27" symbol="LauncherIcon"/>
 <entry id="8388786" method="true" symbol="method"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
 <entry id="8389281" method="true" symbol="onStop"/>
 <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8388891" symbol="subSport"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
 <entry field="true" id="12" symbol="deviceId"/>
 <entry id="8389279" method="true" symbol="onStart"/>
-<entry field="true" id="13" symbol="requestingId"/>
 <entry field="true" id="11" symbol="posnInfo"/>
-<entry id="19" method="true" symbol="onDeviceId"/>
-<entry id="21" method="true" symbol="onPosition"/>
-<entry id="23" module="true" symbol="Layouts"/>
+<entry id="24" method="true" symbol="onDeviceId"/>
+<entry field="true" id="18" symbol="session"/>
+<entry id="20" method="true" symbol="onPosition"/>
+<entry id="26" module="true" symbol="Layouts"/>
 <entry id="8388642" module="true" symbol="Position"/>
+<entry field="true" id="19" symbol="isRequestingId"/>
 <entry id="8389125" method="true" symbol="onHide"/>
 <entry id="15" method="true" symbol="setDeviceId"/>
-<entry id="18" method="true" symbol="requestDeviceId"/>
+<entry id="23" method="true" symbol="requestDeviceId"/>
 <entry id="8390088" module="true" object="true" symbol="JsonData"/>
 <entry id="8389844" symbol="responseType"/>
 <entry id="14" method="true" symbol="setPosition"/>
-<entry id="22" module="true" symbol="Menus"/>
-<entry id="17" method="true" symbol="onDataSent"/>
+<entry id="25" module="true" symbol="Menus"/>
+<entry id="22" method="true" symbol="onDataSent"/>
 <entry id="10" object="true" symbol="RoutechoicesTrackerView"/>
 <entry id="8388772" module="true" object="true" symbol="Fonts"/>
 <entry id="8388635" module="true" symbol="Application"/>
 </symbolTable>
 <localVars>
-<entry endPc="268435528" name="state" stackId="1" startPc="268435479"/>
-<entry endPc="268435577" name="state" stackId="1" startPc="268435528"/>
-<entry endPc="268435602" name="info" stackId="1" startPc="268435577"/>
-<entry endPc="268435773" name="dc" stackId="1" startPc="268435768"/>
-<entry endPc="268436104" name="string" stackId="2" startPc="268435787"/>
-<entry endPc="268436105" name="dc" stackId="1" startPc="268435783"/>
-<entry endPc="268436164" name="info" stackId="1" startPc="268436105"/>
-<entry endPc="268436227" name="id" stackId="1" startPc="268436164"/>
-<entry endPc="268436561" name="options" stackId="4" startPc="268436244"/>
-<entry endPc="268436561" name="url" stackId="2" startPc="268436244"/>
-<entry endPc="268436561" name="responseCallback" stackId="5" startPc="268436244"/>
-<entry endPc="268436561" name="data" stackId="3" startPc="268436244"/>
-<entry endPc="268436561" name="timestamp" stackId="1" startPc="268436244"/>
-<entry endPc="268436570" name="code" stackId="1" startPc="268436565"/>
-<entry endPc="268436570" name="data" stackId="2" startPc="268436565"/>
-<entry endPc="268436738" name="options" stackId="3" startPc="268436574"/>
-<entry endPc="268436738" name="url" stackId="1" startPc="268436574"/>
-<entry endPc="268436738" name="responseCallback" stackId="4" startPc="268436574"/>
-<entry endPc="268436738" name="params" stackId="2" startPc="268436574"/>
-<entry endPc="268436846" name="code" stackId="1" startPc="268436739"/>
-<entry endPc="268436846" name="data" stackId="2" startPc="268436739"/>
+<entry endPc="268435719" name="state" stackId="1" startPc="268435564"/>
+<entry endPc="268435813" name="state" stackId="1" startPc="268435719"/>
+<entry endPc="268435886" name="info" stackId="1" startPc="268435813"/>
+<entry endPc="268436338" name="options" stackId="5" startPc="268436023"/>
+<entry endPc="268436338" name="url" stackId="3" startPc="268436023"/>
+<entry endPc="268436338" name="responseCallback" stackId="6" startPc="268436023"/>
+<entry endPc="268436338" name="data" stackId="4" startPc="268436023"/>
+<entry endPc="268436338" name="timestamp" stackId="2" startPc="268436023"/>
+<entry endPc="268436342" name="posInfo" stackId="1" startPc="268436006"/>
+<entry endPc="268436401" name="code" stackId="1" startPc="268436342"/>
+<entry endPc="268436401" name="data" stackId="2" startPc="268436342"/>
+<entry endPc="268436569" name="options" stackId="3" startPc="268436405"/>
+<entry endPc="268436569" name="url" stackId="1" startPc="268436405"/>
+<entry endPc="268436569" name="responseCallback" stackId="4" startPc="268436405"/>
+<entry endPc="268436569" name="params" stackId="2" startPc="268436405"/>
+<entry endPc="268436685" name="code" stackId="1" startPc="268436570"/>
+<entry endPc="268436685" name="data" stackId="2" startPc="268436570"/>
+<entry endPc="268436752" name="id" stackId="1" startPc="268436685"/>
+<entry endPc="268436780" name="dc" stackId="1" startPc="268436775"/>
+<entry endPc="268437100" name="string" stackId="2" startPc="268436794"/>
+<entry endPc="268437101" name="dc" stackId="1" startPc="268436790"/>
+<entry endPc="268437132" name="info" stackId="1" startPc="268437101"/>
+<entry endPc="268437163" name="id" stackId="1" startPc="268437132"/>
+<entry endPc="268437178" name="c" stackId="1" startPc="268437163"/>
 </localVars>
 <annotations/>
 <functions>
@@ -151,6 +175,27 @@
 </functionEntry>
 <functionEntry accessMode="public" name="getInitialView" parent="RoutechoicesTrackerApp">
 <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" name="sendPosition" parent="RoutechoicesTrackerApp">
+<param id="posInfo"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onDataSent" parent="RoutechoicesTrackerApp">
+<param id="code"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="requestDeviceId" parent="RoutechoicesTrackerApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onDeviceId" parent="RoutechoicesTrackerApp">
+<param id="code"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setDeviceId" parent="RoutechoicesTrackerApp">
+<param id="id"/>
+<documentation/>
 </functionEntry>
 <functionEntry accessMode="public" name="initialize" parent="RoutechoicesTrackerView">
 <documentation/>
@@ -177,33 +222,21 @@
 <param id="id"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" name="sendPosition" parent="RoutechoicesTrackerView">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="onDataSent" parent="RoutechoicesTrackerView">
-<param id="code"/>
-<param id="data"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="requestDeviceId" parent="RoutechoicesTrackerView">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="onDeviceId" parent="RoutechoicesTrackerView">
-<param id="code"/>
-<param id="data"/>
+<functionEntry accessMode="public" name="setConnectedState" parent="RoutechoicesTrackerView">
+<param id="c"/>
 <documentation/>
 </functionEntry>
 </functions>
 <dataEntryOffsetMappings>
 <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
 <dataEntry offset="166" parentId="globals" symbolId="RoutechoicesTrackerView" type="class"/>
-<dataEntry offset="317" parentId="globals" symbolId="RoutechoicesTrackerApp" type="class"/>
-<dataEntry offset="412" parentId="globals" symbolId="Rez" type="module"/>
-<dataEntry offset="491" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry offset="530" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry offset="561" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry offset="592" parentId="Rez" symbolId="JsonData" type="module"/>
-<dataEntry offset="623" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry offset="654" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="293" parentId="globals" symbolId="RoutechoicesTrackerApp" type="class"/>
+<dataEntry offset="444" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry offset="523" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry offset="562" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="593" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="624" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="655" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="686" parentId="Rez" symbolId="Strings" type="module"/>
 </dataEntryOffsetMappings>
 </debugInfo>
