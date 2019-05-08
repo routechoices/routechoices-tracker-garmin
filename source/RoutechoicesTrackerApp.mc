@@ -41,7 +41,7 @@ class RoutechoicesTrackerApp extends Application.AppBase {
     function onPosition(info) {
         mainView.setPosition(info);
         if(deviceId != null && deviceId != "") {
-            sendPosition();
+            sendPosition(info);
         }
     }
 
@@ -54,13 +54,13 @@ class RoutechoicesTrackerApp extends Application.AppBase {
         return [ mainView ];
     }
 
-    function sendPosition(posInfo) {
-        if (posnInfo != null) {
+    function sendPosition(positionInfo) {
+        if (positionInfo != null) {
             var timestamp = Time.now().value();
             System.println("Sending Position " + timestamp.toString());
             var url = "https://www.routechoices.com/api/traccar/?id=" + deviceId +
-                "&lat=" + posnInfo.position.toDegrees()[0].toString() +
-                "&lon=" + posnInfo.position.toDegrees()[1].toString() +
+                "&lat=" + positionInfo.position.toDegrees()[0].toString() +
+                "&lon=" + positionInfo.position.toDegrees()[1].toString() +
                 "&timestamp=" + timestamp.toString();
             var data = {};
             var options = {
