@@ -10,7 +10,7 @@ class TrackerView extends WatchUi.View {
 
     function initialize(mdl) {
         View.initialize();
-        model = mdl
+        model = mdl;
     }
     //! Load your resources here
     function onLayout(dc) {
@@ -26,7 +26,7 @@ class TrackerView extends WatchUi.View {
     //! Update the view
     function onUpdate(dc) {
         var topText = "";
-        var bottomText = "";
+        var bottomText = "00:00:00";
 
         // Set background color
         if( model.isConnected == true ) {
@@ -39,22 +39,46 @@ class TrackerView extends WatchUi.View {
         if (model.deviceId == null) {
             topText = "No Device ID";
         } else {
-            topText = model.deviceId
+            topText = model.deviceId;
         }
         if(model.activityStartTime) {
             bottomText = getTimeString(Time.now().value() - model.activityStartTime);
         }
-        var sizeText = getTextDimensions(topText, Graphics.FONT_LARGE);
-        dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 3) - (sizeText[1] / 2), Graphics.FONT_LARGE, , Graphics.TEXT_JUSTIFY_CENTER );
-        dc.drawText( (dc.getWidth() / 2), (2 * dc.getHeight() / 3) - (sizeText[1] / 2), Graphics.FONT_LARGE, bottomText, Graphics.TEXT_JUSTIFY_CENTER );
+        var sizeText = dc.getFontHeight(Graphics.FONT_LARGE);
+        dc.drawText(
+            (dc.getWidth() / 2),
+            (dc.getHeight() / 3) - (sizeText / 2),
+            Graphics.FONT_LARGE,
+            topText,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+        dc.drawText((
+            dc.getWidth() / 2),
+            (2 * dc.getHeight() / 3) - (sizeText / 2),
+            Graphics.FONT_LARGE,
+            bottomText,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
     }
 
-    function getTimeString(t) {
-        var time =  - t;
+    function getTimeString(time) {
         var s = "";
-        s += Math.floor(time / 3600).toString() + ":";
-        s += Math.floor((time % 3600) / 60).toString() + ":";
-        s += Math.floor(time % 60).toString();
+        var hour = Math.floor(time / 3600);
+        var min = Math.floor((time % 3600) / 60);
+        var sec = Math.floor(time % 60);
+        if(hour < 10) {
+            s += "0";
+        }
+        s += hour.toString() + ":";
+        if(min < 10){
+            s += "0";
+        }
+        s += min.toString() + ":";
+        if(sec < 10){
+            s += "0";
+        }
+        s += sec.toString();
         return s;
     }
 }
+

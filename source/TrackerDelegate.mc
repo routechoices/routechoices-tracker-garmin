@@ -1,3 +1,4 @@
+using Toybox.System;
 using Toybox.WatchUi as Ui;
 
 class TrackerDelegate extends Ui.BehaviorDelegate {
@@ -17,6 +18,6 @@ class TrackerDelegate extends Ui.BehaviorDelegate {
 
     function onBack() {
         model.stopActivity();
-        Toybox.System.exit();
+        System.exit();
     }
 }

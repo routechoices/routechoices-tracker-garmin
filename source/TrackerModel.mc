@@ -1,13 +1,14 @@
+using Toybox.Attention;
 using Toybox.Communications;
 using Toybox.Position;
 using Toybox.System;
 using Toybox.Time;
-
-
-var SERVER_URL = "https://www.routechoices.com";
+using Toybox.Timer;
+using Toybox.WatchUi;
 
 
 class TrackerModel{
+    var SERVER_URL = "https://www.routechoices.com";
     var deviceId = null;
     var isRequestingDeviceId = false;
     var activityStartTime = null;
@@ -18,8 +19,12 @@ class TrackerModel{
         :sport=>ActivityRecording.SPORT_RUNNING,
         :subSport=>ActivityRecording.SUB_SPORT_TRAIL
     });
+    const HAS_TONES = Attention has :playTone;
+    const HAS_VIBRATE = Attention has :vibrate;
 
-    function initialize(settings){
+    hidden var refreshTimer = new Timer.Timer();
+
+    function initialize(){
         Position.enableLocationEvents(
             Position.LOCATION_CONTINUOUS,
             method(:onPosition)
@@ -62,20 +67,47 @@ class TrackerModel{
     function setDeviceId(id) {
         deviceId = id;
         Application.getApp().setProperty("deviceId", id);
-        mainView.setDeviceId(id);
+        WatchUi.requestUpdate();
     }
 
     function startActivity() {
+        if(session.isRecording()){
+            return;
+        }
         session.start();
-        activityStartTime = Time.now().value()
-        Ui.requestUpdate();
+        activityStartTime = Time.now().value();
+        WatchUi.requestUpdate();
+        refreshTimer.start(method(:refresh), 100, true);
+        startStopBuzz();
+    }
+
+    function startStopBuzz(){
+		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
+		var bar = HAS_VIBRATE && vibrate(1500);
+    }
+
+    function vibrate(duration){
+		var vibrateData = [ new Attention.VibeProfile(  100, duration ) ];
+		Attention.vibrate( vibrateData );
+		return true;
+    }
+
+    function beep(tone){
+		Attention.playTone(tone);
+		return true;
+    }
+
+    function refresh() {
+        WatchUi.requestUpdate();
     }
 
     function stopActivity() {
+        refreshTimer.stop();
         if (session.isRecording()) {
             session.stop();
             session.save();
             session = null;
+            startStopBuzz();
         }
         Position.enableLocationEvents(
             Position.LOCATION_DISABLE,
@@ -88,7 +120,7 @@ class TrackerModel{
         if(deviceId != null && deviceId != "") {
             sendPosition(info);
         }
-        Ui.requestUpdate();
+        WatchUi.requestUpdate();
     }
 
     function sendPosition(positionInfo) {
@@ -118,6 +150,6 @@ class TrackerModel{
         } else {
             isConnected = false;
         }
-        Ui.requestUpdate();
+        WatchUi.requestUpdate();
     }
 }
