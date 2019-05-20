@@ -9,10 +9,10 @@ using Toybox.WatchUi;
 
 class TrackerModel{
     var SERVER_URL = "https://www.routechoices.com";
+    var buffer;
     var deviceId = null;
     var isRequestingDeviceId = false;
     var activityStartTime = null;
-    var lastPosition = null;
     var isConnected = false;
     var session = ActivityRecording.createSession({
         :name=>"Live Tracking",
@@ -23,12 +23,15 @@ class TrackerModel{
     const HAS_VIBRATE = Attention has :vibrate;
 
     hidden var refreshTimer = new Timer.Timer();
+    hidden var sendTimer = new Timer.Timer();
 
     function initialize(){
+        buffer = new PositionBuffer();
         Position.enableLocationEvents(
             Position.LOCATION_CONTINUOUS,
             method(:onPosition)
         );
+        sendTimer.start(method(:sendBuffer), 10000, true);
         deviceId = Application.getApp().getProperty("deviceId");
         if (deviceId == null || deviceId == "") {
             requestDeviceId();
@@ -81,6 +84,21 @@ class TrackerModel{
         startStopBuzz();
     }
 
+    function stopActivity() {
+        refreshTimer.stop();
+        sendTimer.stop();
+        if (session.isRecording()) {
+            session.stop();
+            session.save();
+            session = null;
+            startStopBuzz();
+        }
+        Position.enableLocationEvents(
+            Position.LOCATION_DISABLE,
+            method(:onPosition)
+        );
+    }
+
     function startStopBuzz(){
 		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
 		var bar = HAS_VIBRATE && vibrate(1500);
@@ -98,58 +116,20 @@ class TrackerModel{
     }
 
     function refresh() {
+        isConnected = buffer.isConnected;
         WatchUi.requestUpdate();
     }
 
-    function stopActivity() {
-        refreshTimer.stop();
-        if (session.isRecording()) {
-            session.stop();
-            session.save();
-            session = null;
-            startStopBuzz();
-        }
-        Position.enableLocationEvents(
-            Position.LOCATION_DISABLE,
-            method(:onPosition)
-        );
-    }
 
     function onPosition(info) {
-        lastPosition = info;
-        if(deviceId != null && deviceId != "") {
-            sendPosition(info);
-        }
-        WatchUi.requestUpdate();
+        buffer.addPosition(Time.now().value(), info);
+        isConnected = buffer.isConnected;
     }
 
-    function sendPosition(positionInfo) {
-        if (positionInfo != null) {
-            var timestamp = Time.now().value();
-            System.println("Sending Position " + timestamp.toString());
-            var url = SERVER_URL + "/api/traccar/?id=" + deviceId +
-                "&lat=" + positionInfo.position.toDegrees()[0].toString() +
-                "&lon=" + positionInfo.position.toDegrees()[1].toString() +
-                "&timestamp=" + timestamp.toString();
-            var data = {};
-            var options = {
-                :method => Communications.HTTP_REQUEST_METHOD_POST,
-                :headers => {
-                    "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
-                },
-                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
-            };
-            var responseCallback = method(:onDataSent);
-            Communications.makeWebRequest(url, data, options, responseCallback);
+    function sendBuffer() {
+        if (deviceId != null && deviceId != "") {
+            buffer.send(deviceId);
         }
-    }
-
-    function onDataSent(code, data) {
-        if(code==200) {
-            isConnected = true;
-        } else {
-            isConnected = false;
-        }
-        WatchUi.requestUpdate();
+        isConnected = buffer.isConnected;
     }
 }
