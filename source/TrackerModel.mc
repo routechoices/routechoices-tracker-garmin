@@ -1,6 +1,7 @@
 using Toybox.Attention;
 using Toybox.Communications;
 using Toybox.Position;
+using Toybox.Sensor;
 using Toybox.System;
 using Toybox.Time;
 using Toybox.Timer;
@@ -10,6 +11,7 @@ using Toybox.WatchUi;
 class TrackerModel{
     var SERVER_URL = "https://www.routechoices.com";
     var buffer;
+    var heartRate;
     var deviceId = null;
     var isRequestingDeviceId = false;
     var activityStartTime = null;
@@ -31,6 +33,8 @@ class TrackerModel{
             Position.LOCATION_CONTINUOUS,
             method(:onPosition)
         );
+        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+        Sensor.enableSensorEvents(method(:onSensor));
         sendTimer.start(method(:sendBuffer), 10000, true);
         deviceId = Application.getApp().getProperty("deviceId");
         if (deviceId == null || deviceId == "") {
@@ -100,19 +104,19 @@ class TrackerModel{
     }
 
     function startStopBuzz(){
-		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
-		var bar = HAS_VIBRATE && vibrate(1500);
+        var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
+        var bar = HAS_VIBRATE && vibrate(1500);
     }
 
     function vibrate(duration){
-		var vibrateData = [ new Attention.VibeProfile(  100, duration ) ];
-		Attention.vibrate( vibrateData );
-		return true;
+        var vibrateData = [ new Attention.VibeProfile(  100, duration ) ];
+        Attention.vibrate( vibrateData );
+        return true;
     }
 
     function beep(tone){
-		Attention.playTone(tone);
-		return true;
+        Attention.playTone(tone);
+        return true;
     }
 
     function refresh() {
@@ -131,5 +135,9 @@ class TrackerModel{
             buffer.send(deviceId);
         }
         isConnected = buffer.isConnected;
+    }
+    
+    function onSensor(sensorInfo) {
+       heartRate = sensorInfo.heartRate;
     }
 }

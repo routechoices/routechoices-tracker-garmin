@@ -68,7 +68,7 @@ class PositionBuffer {
             var keys = positionBuffer.keys();
             for (var i = 0; i < keys.size(); i++) {
                 if (keys[i] < lastPositionReceived) {
-                    positionBuffer.remove(i);
+                    positionBuffer.remove(keys[i]);
                 }
             }
         } else {
