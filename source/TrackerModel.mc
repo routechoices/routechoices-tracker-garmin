@@ -136,7 +136,7 @@ class TrackerModel{
         }
         isConnected = buffer.isConnected;
     }
-    
+
     function onSensor(sensorInfo) {
        heartRate = sensorInfo.heartRate;
     }
