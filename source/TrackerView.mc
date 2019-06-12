@@ -28,7 +28,7 @@ class TrackerView extends WatchUi.View {
     function onUpdate(dc) {
         var deviceIdText = "";
         var hrText = "--";
-        var timeText = "00:00:00";
+        var timeText = "00:00";
         // Set background color
         if( model.isConnected == true ) {
             dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_GREEN);
