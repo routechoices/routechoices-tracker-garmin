@@ -53,11 +53,7 @@ class TrackerView extends WatchUi.View {
                 prefix = "• ";
                 timeSpent += Time.now().value() - model.activityStartTime;
                 if (model.lapStartTime) {
-                    if (model.activityStartTime > model.lapStartTime) {
-                        lapTime += Time.now().value() - model.activityStartTime;
-                    } else {
-                        lapTime += Time.now().value() - model.lapStartTime;
-                    }
+                    lapTime += Time.now().value() - model.lapStartTime;
                 }
             }
             timeText = prefix + getTimeString(timeSpent);

@@ -86,6 +86,9 @@ class TrackerModel{
         }
         session.start();
         activityStartTime = Time.now().value();
+        if (lapStartTime) {
+            lapStartTime = Time.now().value();
+        }
         WatchUi.requestUpdate();
         refreshTimer.start(method(:refresh), 100, true);
         startStopBuzz();
@@ -94,7 +97,9 @@ class TrackerModel{
     function stopActivity() {
         if (session.isRecording()) {
             accumulatedTime += Time.now().value() - activityStartTime;
-            accumulatedLapTime += Time.now().value() - lapStartTime;
+            if (lapStartTime) {
+                accumulatedLapTime += Time.now().value() - lapStartTime;
+            }
             session.stop();
             startStopBuzz();
         }
