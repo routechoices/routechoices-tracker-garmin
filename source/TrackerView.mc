@@ -26,48 +26,65 @@ class TrackerView extends WatchUi.View {
 
     //! Update the view
     function onUpdate(dc) {
-        var topText = "";
-        var middleText = "--";
-        var bottomText = "00:00:00";
+        var deviceIdText = "";
+        var hrText = "--";
+        var timeText = "00:00:00";
         // Set background color
         if( model.isConnected == true ) {
-            dc.setColor( Graphics.COLOR_TRANSPARENT, Graphics.COLOR_GREEN );
+            dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_GREEN);
         } else {
-            dc.setColor( Graphics.COLOR_TRANSPARENT, Graphics.COLOR_RED );
+            dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_RED);
         }
         dc.clear();
-        dc.setColor( Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT );
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (model.deviceId == null) {
-            topText = "No Device ID";
+            deviceIdText = "No Device ID";
         } else {
-            topText = model.deviceId;
+            deviceIdText = model.deviceId;
         }
         if (model.heartRate) {
-            middleText = model.heartRate.toString();
+            hrText = model.heartRate.toString();
         }
         if(model.activityStartTime) {
-            bottomText = getTimeString(Time.now().value() - model.activityStartTime);
+            var prefix = "  ";
+            var timeSpent = model.accumulatedTime;
+            var lapTime = model.accumulatedLapTime;
+            if(model.session.isRecording()) {
+                prefix = "• ";
+                timeSpent += Time.now().value() - model.activityStartTime;
+                if (model.lapStartTime) {
+                    if (model.activityStartTime > model.lapStartTime) {
+                        lapTime += Time.now().value() - model.activityStartTime;
+                    } else {
+                        lapTime += Time.now().value() - model.lapStartTime;
+                    }
+                }
+            }
+            timeText = prefix + getTimeString(timeSpent);
+            if(model.lapStartTime) {
+                timeText += "  " + getTimeString(lapTime);
+            }
         }
         var sizeText = dc.getFontHeight(Graphics.FONT_LARGE);
         dc.drawText(
             (dc.getWidth() / 2),
-            (dc.getHeight() / 4) - (sizeText / 2),
+            (dc.getHeight() / 4) - sizeText / 2,
             Graphics.FONT_LARGE,
-            topText,
+            deviceIdText,
             Graphics.TEXT_JUSTIFY_CENTER
         );
         dc.drawText((
             dc.getWidth() / 2),
-            (dc.getHeight() / 2) - (sizeText / 2),
+            (dc.getHeight() / 2) - sizeText / 2,
             Graphics.FONT_LARGE,
-            middleText,
+            timeText,
             Graphics.TEXT_JUSTIFY_CENTER
         );
         dc.drawText((
             dc.getWidth() / 2),
-            (3 * dc.getHeight() / 4) - (sizeText / 2),
+            (3 * dc.getHeight() / 4) - sizeText / 2,
             Graphics.FONT_LARGE,
-            bottomText,
+            hrText,
             Graphics.TEXT_JUSTIFY_CENTER
         );
     }

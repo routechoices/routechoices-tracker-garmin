@@ -3,7 +3,6 @@ using Toybox.WatchUi as Ui;
 
 class TrackerDelegate extends Ui.BehaviorDelegate {
     hidden var model;
-    hidden var started = false;
 
     function initialize(mdl) {
         model = mdl;
@@ -11,13 +10,21 @@ class TrackerDelegate extends Ui.BehaviorDelegate {
     }
 
     function onSelect() {
-        model.startActivity();
-        started = true;
+        if(model.session.isRecording()) {
+            model.stopActivity();
+        } else {
+            model.startActivity();
+        }
         return true;
     }
 
     function onBack() {
-        model.stopActivity();
-        System.exit();
+        if(model.session.isRecording()) {
+            model.addLap();
+        } else {
+            model.onQuit();
+            System.exit();
+        }
+        return true;
     }
 }

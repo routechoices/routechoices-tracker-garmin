@@ -15,6 +15,9 @@ class TrackerModel{
     var deviceId = null;
     var isRequestingDeviceId = false;
     var activityStartTime = null;
+    var lapStartTime = null;
+    var accumulatedTime = 0;
+    var accumulatedLapTime = 0;
     var isConnected = false;
     var session = ActivityRecording.createSession({
         :name=>"Live Tracking",
@@ -89,18 +92,12 @@ class TrackerModel{
     }
 
     function stopActivity() {
-        refreshTimer.stop();
-        sendTimer.stop();
         if (session.isRecording()) {
+            accumulatedTime += Time.now().value() - activityStartTime;
+            accumulatedLapTime += Time.now().value() - lapStartTime;
             session.stop();
-            session.save();
-            session = null;
             startStopBuzz();
         }
-        Position.enableLocationEvents(
-            Position.LOCATION_DISABLE,
-            method(:onPosition)
-        );
     }
 
     function startStopBuzz(){
@@ -139,5 +136,28 @@ class TrackerModel{
 
     function onSensor(sensorInfo) {
        heartRate = sensorInfo.heartRate;
+    }
+
+    function addLap() {
+        if (session.isRecording()){
+            session.addLap();
+            accumulatedLapTime = 0;
+            lapStartTime = Time.now().value();
+            startStopBuzz();
+        }
+    }
+
+    function onQuit(){
+        if (accumulatedTime != 0) {
+            session.save();
+            session = null;
+        }
+        refreshTimer.stop();
+        sendTimer.stop();
+        Position.enableLocationEvents(
+            Position.LOCATION_DISABLE,
+            method(:onPosition)
+        );
+        Sensor.setEnabledSensors([]);
     }
 }
