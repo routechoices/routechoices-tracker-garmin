@@ -93,10 +93,18 @@ class TrackerView extends WatchUi.View {
         var hours = Math.floor(time / 3600);
         var min = Math.floor((time % 3600) / 60);
         var sec = Math.floor(time % 60);
-        var s = Lang.format(
-            "$1$:$2$:$3$",
-            [hours.format("%02d"), min.format("%02d"), sec.format("%02d")]
-        );
+        var s = "";
+        if(hours > 0){
+            s = Lang.format(
+                "$1$:$2$",
+                [hours.format("%02d"), min.format("%02d")]
+            );
+        } else {
+            s = Lang.format(
+                "$1$:$2$",
+                [min.format("%02d"), sec.format("%02d")]
+            );
+        }
         return s;
     }
 }
