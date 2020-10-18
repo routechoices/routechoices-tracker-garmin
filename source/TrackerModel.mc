@@ -30,7 +30,14 @@ class TrackerModel{
     hidden var refreshTimer = new Timer.Timer();
     hidden var sendTimer = new Timer.Timer();
 
-    function initialize(){
+    function initialize() {
+        deviceId = Application.getApp().getProperty("deviceId");
+        if (deviceId == null || deviceId == "") {
+            System.println("Device Id not set");
+            requestDeviceId();
+        } else {
+            System.println("Device Id set");
+        }
         buffer = new PositionBuffer();
         Position.enableLocationEvents(
             Position.LOCATION_CONTINUOUS,
@@ -39,16 +46,22 @@ class TrackerModel{
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         Sensor.enableSensorEvents(method(:onSensor));
         sendTimer.start(method(:sendBuffer), 10000, true);
-        deviceId = Application.getApp().getProperty("deviceId");
-        if (deviceId == null || deviceId == "") {
-            requestDeviceId();
+        
+    }
+
+    function resetDeviceId() {
+        if(isRequestingDeviceId || deviceId == null || deviceId == "") {
+            return ;
         }
+        setDeviceId(null);
+        requestDeviceId();
     }
 
     function requestDeviceId() {
         if(isRequestingDeviceId) {
             return ;
         }
+        System.println("Requesting Device Id");
         isRequestingDeviceId = true;
         var url = SERVER_URL + "/api/device_id/";
         var params = {};

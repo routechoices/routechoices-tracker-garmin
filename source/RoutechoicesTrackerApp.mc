@@ -21,7 +21,7 @@ class RoutechoicesTrackerApp extends Application.AppBase {
     function getInitialView() {
         model = new TrackerModel();
         var trackerView = new TrackerView(model);
-        var trackerDelegate = new TrackerDelegate(model);
-        return [trackerView, trackerDelegate];
+        var trackerBehaviorDelegate = new TrackerBehaviorDelegate(model);
+        return [trackerView, trackerBehaviorDelegate];
     }
 }

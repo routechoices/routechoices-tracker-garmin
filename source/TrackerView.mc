@@ -37,7 +37,7 @@ class TrackerView extends WatchUi.View {
         }
         dc.clear();
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        if (model.deviceId == null) {
+        if (model.deviceId == null || model.deviceId == "") {
             deviceIdText = "No Device ID";
         } else {
             deviceIdText = model.deviceId;
